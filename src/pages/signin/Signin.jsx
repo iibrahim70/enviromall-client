@@ -11,7 +11,7 @@ const Signin = () => {
   const from = location.state?.from?.pathname || '/';
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { Login } = useContext(AuthContext);
+  const { logIn } = useContext(AuthContext);
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
@@ -20,12 +20,11 @@ const Signin = () => {
 
   const onSubmit = user => {
     const { email, password } = user;
-    Login(email, password)
+    logIn(email, password)
       .then(res => {
         const user = res.user;
         console.log(user);
         navigate(from, { replace: true });
-        showToast('User Signed In Successfully !');
       })
       .catch(err => console.error(err));
   };
