@@ -63,7 +63,7 @@ const Signin = () => {
             )}
           </div>
 
-          <input type="submit" className="primary-button w-full" value='Login' />
+          <input type="submit" className="primary-button w-full" value='Signin' />
         </form>
 
         {/* toggle singup */}

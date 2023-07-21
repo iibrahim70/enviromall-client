@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import PhoneInput from 'react-phone-number-input'
+import 'react-phone-number-input/style.css'
 
 
 const Signup = () => {
@@ -94,15 +96,19 @@ const Signup = () => {
 
           <div className="mb-4">
             <label className="block mb-1 font-medium">Phone Number</label>
-            <input className="w-full border-b border-[#212121] py-2 px-3 focus:outline-none focus:border-b focus:border-[#333333] focus:ring-0" type='number' {...register('phoneNumber', { required: true })} />
+            <PhoneInput
+              international
+              defaultCountry="BD"
+              placeholder="Phone Number"
+              className="w-full border-b border-[#212121] py-2 px-3 focus:outline-none focus:border-b focus:border-[#333333] focus:ring-0"
+              {...register('phoneNumber', { required: true })}
+            />
             {errors.phoneNumber && (
-              <span className="text-red-500 text-sm">
-                Number is required
-              </span>
+              <span className="text-red-500 text-sm">Phone number is required</span>
             )}
           </div>
 
-          <input type="submit" className="primary-button w-full" value='Submit' />
+          <input type="submit" className="primary-button w-full" value='Signup' />
         </form>
 
         <div className="space-y-3 mt-5 flex flex-col items-center justify-center">
