@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "Premium Wireless Headphones",
+    "price": 149.99,
+    "quantity": 100,
+    "category": "Electronics",
+    "description": "Experience high-quality sound with these premium wireless headphones. Bluetooth connectivity allows you to enjoy music without the hassle of tangled wires. Features noise cancellation technology for an immersive audio experience.",
+    "image": "https://images.pexels.com/photos/3756949/pexels-photo-3756949.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "2",
+    "name": "Smart Fitness Tracker Watch",
+    "price": 79.99,
+    "quantity": 75,
+    "category": "Wearable Tech",
+    "description": "Keep track of your health and fitness goals with this smart fitness tracker watch. Monitor your heart rate, steps, sleep patterns, and receive notifications from your smartphone. Stylish and comfortable for everyday wear.",
+    "image": "https://images.pexels.com/photos/4426516/pexels-photo-4426516.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "3",
+    "name": "Retro Polaroid-Style Instant Camera",
+    "price": 89.99,
+    "quantity": 50,
+    "category": "Photography",
+    "description": "Capture memories in an instant with this retro polaroid-style instant camera. The camera prints photos right after you take them, giving you physical keepsakes of your special moments. Perfect for parties and gatherings.",
+    "image": "https://images.pexels.com/photos/2983398/pexels-photo-2983398.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "4",
+    "name": "Organic Cotton Graphic T-Shirt",
+    "price": 29.99,
+    "quantity": 150,
+    "category": "Apparel",
+    "description": "Express yourself with this eco-friendly organic cotton graphic t-shirt. Features a unique and artistic design printed with environmentally friendly inks. Comfortable fit for casual wear.",
+    "image": "https://images.pexels.com/photos/4066292/pexels-photo-4066292.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "5",
+    "name": "Compact Travel Drone",
+    "price": 249.99,
+    "quantity": 30,
+    "category": "Electronics",
+    "description": "Explore the world from new heights with this compact travel drone. Capture breathtaking aerial photos and videos with ease. Foldable design makes it convenient to carry during your travels.",
+    "image": "https://images.pexels.com/photos/739410/pexels-photo-739410.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "6",
+    "name": "Stainless Steel Insulated Water Bottle",
+    "price": 19.99,
+    "quantity": 200,
+    "category": "Home & Kitchen",
+    "description": "Stay hydrated on the go with this stainless steel insulated water bottle. Keeps beverages hot for up to 12 hours and cold for up to 24 hours. Leak-proof design and sleek finish.",
+    "image": "https://images.pexels.com/photos/6271638/pexels-photo-6271638.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "7",
+    "name": "Leather Laptop Briefcase",
+    "price": 129.99,
+    "quantity": 60,
+    "category": "Fashion & Accessories",
+    "description": "Carry your laptop and essentials in style with this leather laptop briefcase. Multiple compartments for organized storage. Made from genuine leather for a professional and sophisticated look.",
+    "image": "https://images.pexels.com/photos/7256413/pexels-photo-7256413.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "8",
+    "name": "Aromatherapy Essential Oil Diffuser",
+    "price": 39.99,
+    "quantity": 90,
+    "category": "Home & Living",
+    "description": "Create a calming atmosphere in your home with this aromatherapy essential oil diffuser. Choose from a variety of soothing scents and enjoy the benefits of aromatherapy. LED lights add a soothing visual element.",
+    "image": "https://images.pexels.com/photos/5760898/pexels-photo-5760898.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "9",
+    "name": "Wooden Chess Set",
+    "price": 49.99,
+    "quantity": 40,
+    "category": "Toys & Games",
+    "description": "Engage in timeless strategic gameplay with this wooden chess set. Crafted from high-quality wood, this set doubles as a decorative piece when not in use. Suitable for players of all skill levels.",
+    "image": "https://images.pexels.com/photos/7644275/pexels-photo-7644275.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": "10",
+    "name": "Solar-Powered Outdoor LED Lights",
+    "price": 69.99,
+    "quantity": 80,
+    "category": "Home & Garden",
+    "description": "Illuminate your outdoor space with these solar-powered LED lights. Energy-efficient and environmentally friendly, these lights automatically turn on at dusk. Ideal for gardens, patios, and pathways.",
+    "image": "https://images.pexels.com/photos/995817/pexels-photo-995817.jpeg?auto=compress&cs=tinysrgb&w=600"
+  }
+]
