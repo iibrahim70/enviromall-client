@@ -3,9 +3,6 @@ import React from "react";
 const ProductCard = ({ product }) => {
   return (
     <div className="shadow-xl rounded-xl p-5 space-y-2">
-      {/* <p className="bg-three px-3 py-2 rounded-xl float-right mb-2 text-white">
-        {product?.category}
-      </p> */}
       <img
         className="rounded-xl h-[200px] w-full"
         src={product?.image}
