@@ -1,8 +1,9 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { AuthContext } from "../providers/AuthProvider";
+import Button from "../components/button/Button";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -69,11 +70,9 @@ const Signin = () => {
             )}
           </div>
 
-          <input
-            type="submit"
-            className="primary-button w-full"
-            value="Signin"
-          />
+          <Button type="submit" size="full">
+            Signin
+          </Button>
         </form>
 
         {/* toggle singup */}

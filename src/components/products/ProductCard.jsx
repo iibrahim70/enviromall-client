@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Button, { buttonVariants } from "../button/Button";
 
 const ProductCard = ({ product }) => {
   return (
@@ -12,8 +14,13 @@ const ProductCard = ({ product }) => {
       <p>Price: ${product?.price}</p>
       <p>Quantity: {product?.quantity}</p>
       <div className="flex justify-between">
-        <button className="secondary-button">Details</button>
-        <button className="primary-button">Add To Cart</button>
+        <Link
+          to={`/products/${product?._id}`}
+          className={buttonVariants({ colors: "secondary", size: "small" })}
+        >
+          Details
+        </Link>
+        <Button size="small">Add To Cart</Button>
       </div>
     </div>
   );

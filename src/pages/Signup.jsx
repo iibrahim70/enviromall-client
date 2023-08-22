@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import Button from "../components/button/Button";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -117,11 +118,9 @@ const Signup = () => {
             )}
           </div>
 
-          <input
-            type="submit"
-            className="primary-button w-full"
-            value="Signup"
-          />
+          <Button type="submit" size="full">
+            Signup
+          </Button>
         </form>
 
         <div className="space-y-3 mt-5 flex flex-col items-center justify-center">

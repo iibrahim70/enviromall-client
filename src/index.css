@@ -8,14 +8,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.primary-button {
-  @apply inline-block text-center rounded active:scale-105 transition duration-300 ease-in-out font-medium py-2 px-4 bg-one hover:bg-one/90 text-white;
-}
-
-.secondary-button {
-  @apply inline-block text-center rounded active:scale-105 transition duration-300 ease-in-out font-medium py-2 px-4 bg-two hover:bg-two/90 text-white;
-}
-
 /* react phone num input */
 .PhoneInputInput {
   outline: none;
