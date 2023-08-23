@@ -2,11 +2,11 @@ import { Link, Outlet } from "react-router-dom";
 
 const Dashboard = () => {
   const sidebarItems = (
-    <div className="flex flex-col h-full  font-medium text-base space-y-2 p-5 dashboard-button">
+    <div className="flex flex-col h-full font-medium text-base space-y-2 p-5 dashboard-button bg-slate-900">
       <Link>Dashboard</Link>
       <Link>Order List</Link>
       <Link>Customer List</Link>
-      <Link>Products List</Link>
+      <Link to="products-list">Products List</Link>
       <Link to="add-products">Add Products</Link>
       <Link to="/">Home</Link>
     </div>

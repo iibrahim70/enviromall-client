@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import Button, { buttonVariants } from "../button/Button";
+import Button from "../button/Button";
 
 const CartsTable = ({ product, handleRemoveFromCart }) => {
   return (

@@ -33,7 +33,7 @@ function AddProducts() {
 
   return (
     <div className="w-[60%] mx-auto my-10 shadow-2xl p-10">
-      <form onSubmit={handleSubmit(onSubmit)} className="form-color">
+      <form onSubmit={handleSubmit(onSubmit)} className="text-color">
         <div className="mb-4">
           <label className="block mb-1 font-medium">Products Name</label>
           <input

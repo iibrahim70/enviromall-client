@@ -13,7 +13,13 @@ body {
   @apply btn btn-ghost;
 }
 
-.form-color {
+/* dashboard drawer button */
+.drawer-button {
+  @apply bg-two hover:bg-two/80;
+}
+
+/* text color for white theme */
+.text-color {
   color: black;
 }
 
