@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Button from "../../components/button/Button";
+import useTitle from "../../hooks/useTitle";
 
 function AddProducts() {
+  useTitle("Add Products");
+
   const {
     register,
     handleSubmit,
@@ -32,7 +35,7 @@ function AddProducts() {
   };
 
   return (
-    <div className="w-[60%] mx-auto my-10 shadow-2xl p-10">
+    <div className="w-[80%] xl:w-[60%] mx-auto my-10 shadow-2xl p-10">
       <form onSubmit={handleSubmit(onSubmit)} className="text-color">
         <div className="mb-4">
           <label className="block mb-1 font-medium">Products Name</label>

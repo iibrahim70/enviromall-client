@@ -1,8 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const OrdersList = () => {
+  useTitle("Orders List");
+
   const { isLoading, error, data } = useQuery(["orders"], () =>
     axios.get("http://localhost:5000/orders").then((res) => res.data)
   );

@@ -3,8 +3,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { BsTrash3Fill } from "react-icons/bs";
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 const ProductsList = () => {
+  useTitle("Products List");
+
   const { isLoading, error, data, refetch } = useQuery(["products"], () =>
     axios.get("http://localhost:5000/products").then((res) => res.data)
   );

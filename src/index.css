@@ -9,6 +9,11 @@ body {
 }
 
 /* dashboard button */
+.navbar-button a {
+  @apply btn btn-ghost;
+}
+
+/* dashboard button */
 .dashboard-button a {
   @apply btn btn-ghost;
 }

@@ -1,9 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import Button from "../../components/button/Button";
+import useTitle from "../../hooks/useTitle";
 
 const OrderDetails = () => {
+  useTitle("Order Details");
+
   const orderDetails = useLoaderData();
-  const { productName, image, price, description } = orderDetails;
+  const { productName, image, price, quantity, description } = orderDetails;
 
   return (
     <div>

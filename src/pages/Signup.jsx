@@ -5,8 +5,11 @@ import { AuthContext } from "../providers/AuthProvider";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import Button from "../components/button/Button";
+import useTitle from "../hooks/useTitle";
 
 const Signup = () => {
+  useTitle("Signup");
+
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";

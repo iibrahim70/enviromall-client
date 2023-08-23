@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   const navItems = (
-    <div className="space-x-5 font-medium text-base">
+    <div className="space-x-5 font-medium text-base navbar-button">
       <Link to="/">Home</Link>
       <Link to="/products">Products</Link>
       <Link to="/cart-items">Cart Items</Link>

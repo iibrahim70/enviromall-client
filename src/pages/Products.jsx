@@ -1,8 +1,11 @@
 import ProductCard from "../components/products/ProductCard";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import useTitle from "../hooks/useTitle";
 
 const Products = () => {
+  useTitle("Products");
+
   const { isLoading, error, data } = useQuery(["products"], () =>
     axios.get("http://localhost:5000/products").then((res) => res.data)
   );

@@ -6,6 +6,8 @@ import { AuthContext } from "../providers/AuthProvider";
 import Button from "../components/button/Button";
 
 const Signin = () => {
+  useTitle("Signin");
+
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";

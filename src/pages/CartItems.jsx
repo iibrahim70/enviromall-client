@@ -3,8 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import CartsTable from "../components/carts/CartsTable";
 import Swal from "sweetalert2";
+import useTitle from "../hooks/useTitle";
 
 const CartItems = () => {
+  useTitle("Cart Items");
+
   const [cartItems, setCartItems] = useState([]);
   const {
     isLoading,
