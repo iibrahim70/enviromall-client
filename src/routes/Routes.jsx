@@ -9,6 +9,8 @@ import CartItems from "../pages/CartItems";
 import Dashboard from "../pages/dashboard/Dashboard";
 import AddProducts from "../pages/dashboard/AddProducts";
 import ProductsList from "../pages/dashboard/ProductsList";
+import OrdersList from "../pages/dashboard/OrdersList";
+import OrderDetails from "../pages/dashboard/OrderDetails";
 
 const Router = createBrowserRouter([
   {
@@ -30,6 +32,12 @@ const Router = createBrowserRouter([
           fetch(`http://localhost:5000/products/${params.id}`),
       },
       {
+        path: "orders/:id",
+        element: <OrderDetails />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/orders/${params.id}`),
+      },
+      {
         path: "/cart-items",
         element: <CartItems />,
       },
@@ -46,6 +54,10 @@ const Router = createBrowserRouter([
       {
         path: "/dashboard/products-list",
         element: <ProductsList />,
+      },
+      {
+        path: "/dashboard/orders-list",
+        element: <OrdersList />,
       },
     ],
   },

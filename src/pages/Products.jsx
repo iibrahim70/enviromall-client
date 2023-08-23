@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const Products = () => {
-  const { isLoading, error, data } = useQuery(["allCars"], () =>
+  const { isLoading, error, data } = useQuery(["products"], () =>
     axios.get("http://localhost:5000/products").then((res) => res.data)
   );
 

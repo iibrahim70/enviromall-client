@@ -5,7 +5,7 @@ import { BsTrash3Fill } from "react-icons/bs";
 import Swal from "sweetalert2";
 
 const ProductsList = () => {
-  const { isLoading, error, data, refetch } = useQuery(["allCars"], () =>
+  const { isLoading, error, data, refetch } = useQuery(["products"], () =>
     axios.get("http://localhost:5000/products").then((res) => res.data)
   );
 
@@ -52,13 +52,13 @@ const ProductsList = () => {
   };
 
   return (
-    <div className="bg-red-100 w-full h-full flex items-center justify-center py-10">
+    <div className="w-full h-full flex items-center justify-center py-10 text-color">
       <div className="overflow-x-auto">
-        <table className="table text-color">
+        <table className="table">
           <thead>
             <tr>
               <th>Image</th>
-              <th>Name</th>
+              <th>Product Name</th>
               <th>Price</th>
               <th>Quantity</th>
               <th>Details</th>
