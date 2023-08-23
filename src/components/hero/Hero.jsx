@@ -8,6 +8,7 @@ import pantImage from "../../assets/hero/pant.png";
 import shortsImage from "../../assets/hero/shorts.png";
 import watchImage from "../../assets/hero/watch.png";
 import shoesImage from "../../assets/hero/air-jordan.png";
+import Button from "../button/Button";
 
 const customData = [
   {
@@ -65,7 +66,7 @@ const Hero = () => {
     >
       {customData.map((data, index) => (
         <SwiperSlide key={index}>
-          <div className="bg-slate-50">
+          <div className="">
             <div className="w-[90%] mx-auto min-h-[calc(100vh-68px)] flex items-center justify-center flex-col lg:flex-row py-10 lg:py-0 gap-y-10 lg:gap-y-10">
               <div className="flex-1 space-y-5">
                 <div className="flex items-center gap-3">
@@ -76,12 +77,14 @@ const Hero = () => {
                   <h2 className="text-4xl lg:text-6xl font-bold">
                     {data.heading}
                   </h2>
-                  <hr className="w-14 border-2 border-black" />
+                  {/* <hr className="w-14 border-2 border-white" /> */}
                 </div>
                 <p className="font-semibold">{data.discount}</p>
-                <button className="inline-flex items-center justify-center capitalize lg:text-base lg:px-6 md:px-4 px-3 lg:py-3 py-2 font-medium text-white transition hover:drop-shadow-2xl rounded-full border-none shadow-xl md:mb-0 bg-[#4D4376] hover:bg-[#5E548E] duration-700 cursor-pointer">
-                  {data.buttonText} <BsArrowRight className="ml-2" />
-                </button>
+                <Button colors="purple">
+                  <div className="inline-flex items-center">
+                    {data.buttonText} <BsArrowRight className="ml-2" />
+                  </div>
+                </Button>
               </div>
 
               <div className="flex-1 flex justify-end">

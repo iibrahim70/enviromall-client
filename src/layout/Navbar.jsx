@@ -12,8 +12,16 @@ const Navbar = () => {
       .catch((err) => console.log(err));
   };
 
+  const navItems = (
+    <div className="space-x-5 font-medium text-base">
+      <Link to="/">Home</Link>
+      <Link to="/products">Products</Link>
+      <Link>Cart Items</Link>
+    </div>
+  );
+
   return (
-    <nav className="bg-red-100">
+    <nav className="shadow-2xl">
       <div className="navbar w-[90%] mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -37,49 +45,13 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Item 3</a>
-              </li>
+              {navItems}
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">EnviroMall</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Parent</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
         <div className="navbar-end">
           {user ? (

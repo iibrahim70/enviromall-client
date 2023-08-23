@@ -9,6 +9,7 @@ export const buttonVariants = cva(
       colors: {
         primary: "bg-one hover:bg-one/90 text-white",
         secondary: "bg-two hover:bg-two/90 text-white",
+        purple: "bg-three hover:bg-three/90 text-white",
       },
       size: {
         default: "py-3 px-6",

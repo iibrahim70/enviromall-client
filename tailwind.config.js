@@ -6,7 +6,7 @@ export default {
       colors: {
         one: "#569DAA",
         two: "#54BAB9",
-        three: "",
+        three: "#4D4376",
       },
     },
   },

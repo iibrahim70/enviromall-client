@@ -4,7 +4,7 @@ import Button, { buttonVariants } from "../button/Button";
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="shadow-xl rounded-xl p-5 space-y-2">
+    <div className="shadow-2xl rounded-xl p-5 space-y-2">
       <img
         className="rounded-xl h-[200px] w-full"
         src={product?.image}
