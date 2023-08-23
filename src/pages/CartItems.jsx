@@ -65,8 +65,7 @@ const CartItems = () => {
   };
 
   return (
-    <div>
-      <h2>Your Cart</h2>
+    <div className="py-10">
       {cartProducts.map((product) => (
         <CartsTable
           key={product._id}

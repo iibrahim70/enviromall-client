@@ -17,6 +17,7 @@ const Navbar = () => {
       <Link to="/">Home</Link>
       <Link to="/products">Products</Link>
       <Link to="/cart-items">Cart Items</Link>
+      <Link to="/dashboard">Dashboard</Link>
     </div>
   );
 
@@ -48,7 +49,9 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">EnviroMall</a>
+          <Link to="/" className="font-semibold text-xl">
+            EnviroMall
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>

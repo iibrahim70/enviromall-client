@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Button, { buttonVariants } from "../button/Button";
 
@@ -16,8 +15,11 @@ const CartsTable = ({ product, handleRemoveFromCart }) => {
           <p>Price: ${product?.price}</p>
           <p>Quantity: {product?.quantity}</p>
           <div className="flex justify-end">
-            <Button onClick={() => handleRemoveFromCart(product?._id)} size="small">
-              Remove Item
+            <Button
+              onClick={() => handleRemoveFromCart(product?._id)}
+              size="small"
+            >
+              Remove
             </Button>
           </div>
         </div>

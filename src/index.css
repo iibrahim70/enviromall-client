@@ -8,6 +8,15 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* dashboard button */
+.dashboard-button a {
+  @apply btn btn-ghost;
+}
+
+.form-color {
+  color: black;
+}
+
 /* react phone num input */
 .PhoneInputInput {
   outline: none;
