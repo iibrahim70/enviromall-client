@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className="space-x-5 font-medium text-base">
       <Link to="/">Home</Link>
       <Link to="/products">Products</Link>
-      <Link>Cart Items</Link>
+      <Link to="/cart-items">Cart Items</Link>
     </div>
   );
 
