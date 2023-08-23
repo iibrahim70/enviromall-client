@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
@@ -14,7 +15,9 @@ const CartItems = () => {
     error,
     data: productsData,
   } = useQuery(["cart-items"], () =>
-    axios.get("http://localhost:5000/products").then((res) => res.data)
+    axios
+      .get("https://enviromall-server.vercel.app/products")
+      .then((res) => res.data)
   );
 
   // Retrieve the cart items from local storage
@@ -68,15 +71,23 @@ const CartItems = () => {
   };
 
   return (
-    <div className="py-10">
-      {cartProducts.map((product) => (
-        <CartsTable
-          key={product._id}
-          product={product}
-          handleRemoveFromCart={handleRemoveFromCart}
-        />
-      ))}
-    </div>
+    <>
+      {cartProducts.length === 0 ? (
+        <div className="flex items-center justify-center min-h-[calc(100vh-64px)]">
+          <p>No items in your cart</p>
+        </div>
+      ) : (
+        <div className="my-10">
+          {cartProducts.map((product) => (
+            <CartsTable
+              key={product._id}
+              product={product}
+              handleRemoveFromCart={handleRemoveFromCart}
+            />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 

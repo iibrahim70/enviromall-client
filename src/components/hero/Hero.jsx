@@ -66,34 +66,32 @@ const Hero = () => {
     >
       {customData.map((data, index) => (
         <SwiperSlide key={index}>
-          <div className="">
-            <div className="w-[90%] mx-auto min-h-[calc(100vh-68px)] flex items-center justify-center flex-col lg:flex-row py-10 lg:py-0 gap-y-10 lg:gap-y-10">
-              <div className="flex-1 space-y-5">
-                <div className="flex items-center gap-3">
-                  <hr className="w-10 border-2 border-red-600" />
-                  <p>{data.title}</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <h2 className="text-4xl lg:text-6xl font-bold">
-                    {data.heading}
-                  </h2>
-                  {/* <hr className="w-14 border-2 border-white" /> */}
-                </div>
-                <p className="font-semibold">{data.discount}</p>
-                <Button colors="purple">
-                  <div className="inline-flex items-center">
-                    {data.buttonText} <BsArrowRight className="ml-2" />
-                  </div>
-                </Button>
+          <div className="w-[90%] mx-auto min-h-[calc(100vh-68px)]  items-center justify-center grid grid-cols-1 md:grid-cols-2 py-10 lg:py-0 gap-y-20 gap-x-10">
+            <div className="space-y-5 flex items-center flex-col md:block">
+              <div className="flex items-center gap-3">
+                <hr className="w-10 border-2 border-red-600" />
+                <p>{data.title}</p>
               </div>
+              <div className="flex items-center gap-3">
+                <h2 className="text-4xl lg:text-6xl font-bold">
+                  {data.heading}
+                </h2>
+                {/* <hr className="w-14 border-2 border-white" /> */}
+              </div>
+              <p className="font-semibold">{data.discount}</p>
+              <Button colors="purple">
+                <div className="inline-flex items-center">
+                  {data.buttonText} <BsArrowRight className="ml-2" />
+                </div>
+              </Button>
+            </div>
 
-              <div className="flex-1 flex justify-end">
-                <img
-                  className="lg:h-[300px]"
-                  src={data.image}
-                  alt={data.heading}
-                />
-              </div>
+            <div className="flex justify-center md:flex md:justify-end">
+              <img
+                className="h-[200px] md:h-[300px]"
+                src={data.image}
+                alt={data.heading}
+              />
             </div>
           </div>
         </SwiperSlide>

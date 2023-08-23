@@ -7,7 +7,9 @@ const Products = () => {
   useTitle("Products");
 
   const { isLoading, error, data } = useQuery(["products"], () =>
-    axios.get("http://localhost:5000/products").then((res) => res.data)
+    axios
+      .get("https://enviromall-server.vercel.app/products")
+      .then((res) => res.data)
   );
 
   if (isLoading)

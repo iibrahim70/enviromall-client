@@ -1,14 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
 
-const OrdersList = () => {
-  useTitle("Orders List");
+const CustomersList = () => {
+  useTitle("Customers List");
 
-  const { isLoading, error, data } = useQuery(["orders"], () =>
+  const { isLoading, error, data } = useQuery(["customers"], () =>
     axios
-      .get("https://enviromall-server.vercel.app/orders")
+      .get("https://enviromall-server.vercel.app/customers")
       .then((res) => res.data)
   );
 
@@ -33,9 +32,7 @@ const OrdersList = () => {
             <tr>
               <th></th>
               <th>Name</th>
-              <th>Price</th>
-              <th>Ordered Date</th>
-              <th>Status</th>
+              <th>Email</th>
               <th>Details</th>
             </tr>
           </thead>
@@ -43,14 +40,10 @@ const OrdersList = () => {
             {data.map((item, index) => (
               <tr key={item._id}>
                 <td>{index + 1}</td>
-                <td>{item.productName}</td>
-                <td>{item.price}</td>
-                <td>{item.orderedDate}</td>
-                <td>{item.status}</td>
+                <td>{item.name}</td>
+                <td>{item.email}</td>
                 <td>
-                  <Link to={`/orders/${item?._id}`} className="btn btn-sm">
-                    Details
-                  </Link>
+                  <button className="btn btn-sm">Details</button>
                 </td>
               </tr>
             ))}
@@ -61,4 +54,4 @@ const OrdersList = () => {
   );
 };
 
-export default OrdersList;
+export default CustomersList;

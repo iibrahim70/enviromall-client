@@ -17,7 +17,7 @@ function AddProducts() {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/products", data)
+      .post("https://enviromall-server.vercel.app/products", data)
       .then((response) => {
         console.log(response.data);
         Swal.fire({

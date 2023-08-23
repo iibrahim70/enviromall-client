@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { AuthContext } from "../providers/AuthProvider";
 import Button from "../components/button/Button";
+import useTitle from "../hooks/useTitle";
 
 const Signin = () => {
   useTitle("Signin");
@@ -36,7 +37,7 @@ const Signin = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-white text-color">
       <div className="lg:w-[35%] shadow-xl p-10">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">

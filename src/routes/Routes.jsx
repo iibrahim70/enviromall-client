@@ -11,6 +11,8 @@ import AddProducts from "../pages/dashboard/AddProducts";
 import ProductsList from "../pages/dashboard/ProductsList";
 import OrdersList from "../pages/dashboard/OrdersList";
 import OrderDetails from "../pages/dashboard/OrderDetails";
+import DashboardLayout from "../layout/DashboardLayout";
+import CustomersList from "../pages/dashboard/CustomersList";
 
 const Router = createBrowserRouter([
   {
@@ -29,13 +31,13 @@ const Router = createBrowserRouter([
         path: "products/:id",
         element: <ProductDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://enviromall-server.vercel.app/products/${params.id}`),
       },
       {
         path: "orders/:id",
         element: <OrderDetails />,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/orders/${params.id}`),
+          fetch(`https://enviromall-server.vercel.app/orders/${params.id}`),
       },
       {
         path: "/cart-items",
@@ -45,24 +47,32 @@ const Router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard />,
+    element: <DashboardLayout />,
     children: [
       {
-        path: "/dashboard/add-products",
-        element: <AddProducts />,
+        path: "home",
+        element: <Dashboard />,
       },
       {
-        path: "/dashboard/products-list",
+        path: "customers-list",
+        element: <CustomersList />,
+      },
+      {
+        path: "orders-list",
+        element: <OrdersList />,
+      },
+      {
+        path: "products-list",
         element: <ProductsList />,
       },
       {
-        path: "/dashboard/orders-list",
-        element: <OrdersList />,
+        path: "add-products",
+        element: <AddProducts />,
       },
     ],
   },
-  { path: "/signin", element: <Signin /> },
   { path: "/signup", element: <Signup /> },
+  { path: "/signin", element: <Signin /> },
 ]);
 
 export default Router;

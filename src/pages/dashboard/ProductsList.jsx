@@ -9,7 +9,9 @@ const ProductsList = () => {
   useTitle("Products List");
 
   const { isLoading, error, data, refetch } = useQuery(["products"], () =>
-    axios.get("http://localhost:5000/products").then((res) => res.data)
+    axios
+      .get("https://enviromall-server.vercel.app/products")
+      .then((res) => res.data)
   );
 
   if (isLoading)
@@ -38,7 +40,7 @@ const ProductsList = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:5000/products/${id}`)
+          .delete(`https://enviromall-server.vercel.app/products/${id}`)
           .then((response) => {
             Swal.fire({
               icon: "success",
